@@ -1,61 +1,123 @@
-import React from 'react';
-import {Layout,Header,Navigation,Content,Menu,MenuItem,Footer,FooterDropDownSection,FooterLinkList,FooterSection} from 'react-mdl';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-class AboutUs extends React.Component{
-    render(){
-        return(
-            <div><div style={{height: '400px', position: 'relative',background: 'url(https://www.scholarshipchina.com/upload/News/18/18/b91d94229ead1f1b16cd6a1616a2c4a6.jpg) center / cover'}}>
-    <Layout fixedHeader> 
-    <Header title="TRIPTOK">
+import React, {Component} from 'react';
+import { Footer } from 'react-mdl';
+import './AboutUs.css';
+import FooterComponent from './Footer';
+import HeaderComponent from './Header';
+class Home extends Component {
+    render() {
+	    return (
+            <div>
+                <HeaderComponent />
+            <section class="team-section">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>AboutUs</h1>
+                        <p style={{fontSize:"25px"}}>Enough with the Formalities,Why dont you Go ahead and Internet Stalk us </p>
+                    </div>
+                </div>
+            <div class="container">
+                
+                <div class="row">
+                    <div class="team-items">
+                         <div class="item">
+                             <img src="tour_images/team-1.jpg" alt="team" height="300px"/>
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>Renuka</h5>
+                                      <p>Manager</p>
+                                      <div class="social-links">
+                                          <a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item">
+                             <img src="tour_images/team-2.jpg" alt="team"  height="300px"/>
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>Deepika</h5>
+                                      <p>Manager</p>
+                                      <div class="social-links">
+                                          <a href=""><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item">
+                             <img src="tour_images/team-3.jpg" alt="team"  height="300px"/>
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>Vishwasri</h5>
+                                      <p>Manager</p>
+                                      <div class="social-links">
+                                          <a href=""><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item">
+                             <img src="tour_images/team-4.jpg" alt="team"  height="300px" />
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>VijayaDurga</h5>
+                                      <p>Designer</p>
+                                      <div class="social-links">
+                                          <a href=""><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item">
+                             <img src="tour_images/team-5.jpg" alt="team"  height="300px" />
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>Felcy</h5>
+                                      <p>Manager</p>
+                                      <div class="social-links">
+                                          <a href=""><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="item">
+                             <img src="tour_images/team-6.jpg" alt="team"  height="300px" />
+                             <div class="inner">
+                                 <div class="info">
+                                      <h5>Deepthi</h5>
+                                      <p>Manager</p>
+                                      <div class="social-links">
+                                          <a href=""><span class="fa fa-facebook"></span></a>
+                                          <a href=""><span class="fa fa-twitter"></span></a>
+                                          <a href=""><span class="fa fa-linkedin"></span></a>
+                                          <a href=""><span class="fa fa-youtube"></span></a>
+                                      </div>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                    </div>
+                </div>
+            </div>
+         </section>
+         <FooterComponent />
+       </div>
      
-            <Navigation >
-                <Link to="/AboutUs" style={{color: 'black'}}>About us</Link>
-                <a href="/" style={{color: 'black'}}>Blog</a>
-                <a href="/" style={{color: 'black'}}>Packages</a>
-                <div style={{position: 'relative'}}>
-                <a id="demo-menu-lower-right" style={{color: 'black'}}>Login</a>
-                <Menu target="demo-menu-lower-right" align="right">
-                <MenuItem ><Link to="/Cust" >As Customer</Link></MenuItem>
-                <MenuItem>As Admin</MenuItem>         
-                <MenuItem>As Staff</MenuItem>
-                </Menu>
-                </div>  
-            </Navigation>
-        </Header>
-        <Content />
-    </Layout>
-   </div>
-  <div>
-
-  </div>
-  <Footer size="mega">
-    <FooterSection type="middle">
-    <FooterDropDownSection title="Contact Us">
-           <h4>TRIPTOK</h4>
-           <h6>Hogwarts,UK</h6>
-           <h6><b>Phone:</b> 9876543210</h6>
-           <h6><b>Email:</b> Tripintip@triptok.com</h6>
-        </FooterDropDownSection>
-        <FooterDropDownSection title="About Us">
-           <p> Cleartrip.com is centered on making travel simple and has been designed to let you look for cheap flights or complete your flight booking in just a few clicks. The booking experience is seamless and fast with our features like Expressway – which allows for easy checkout, Shortlist – this lets you compare multiple itineraries across dates, Fare alert – here we inform you of price drops or hikes, and even EMI options for expensive air tickets. Our round-the-clock customer service ensures all your queries and concerns are addressed efficiently and resolved.</p>
-        </FooterDropDownSection>
-        <FooterDropDownSection >
-            
-        </FooterDropDownSection>
-        <FooterDropDownSection title=" More">
-            <FooterLinkList>
-                <a href="/">About us</a>
-                <a href="/">Blog</a>
-                <a href="/">Book ticket</a>
-            </FooterLinkList>
-        </FooterDropDownSection>
-    </FooterSection>
-   
-</Footer>
-          </div>
-        );
+	     );
     }
 }
- export default AboutUs;
+export default Home;

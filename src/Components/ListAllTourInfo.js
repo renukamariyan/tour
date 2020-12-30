@@ -9,6 +9,7 @@ import filterFactory, { textFilter } from 'react-bootstrap-table2-filter';
 import ReactPaginate from 'react-paginate' 
 import '../App.css'
 import HeaderComponent from './Header';
+import FooterComponent from './Footer';
 class ListAllTourInfo extends Component {
     constructor(props) {
         super(props)
@@ -140,7 +141,7 @@ class ListAllTourInfo extends Component {
             
        
        <button  className="btn btn-success"  style={{marginLeft: "500px"}}onClick={this.logout.bind(this)} >Logout</button>
-          </div>     
+         <FooterComponent/> </div>     
         )
         
         

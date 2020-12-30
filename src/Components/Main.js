@@ -23,9 +23,11 @@ import Payment from './Payment';
 import StaffLogin from './StaffLogin';
 import ListAllTourInfo from './ListAllTourInfo';
 import Package from './Package';
+import Blog from './Blog';
 
 const Main = () => (
 <Switch>
+<Route exact path="/blog" component={Blog}></Route>
 <Route exact path="/payment" component={Payment}></Route>
 <Route exact path="/package" component={Package}></Route>
 <Route exact path="/cust:userId" component={Cust}></Route>

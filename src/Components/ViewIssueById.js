@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import IssueService from '../Service/IssueService'
+import FooterComponent from './Footer'
 import HeaderComponent from './Header'
 
 class ViewIssueById extends Component {
@@ -61,6 +62,7 @@ class ViewIssueById extends Component {
                     <button className="btn btn-success" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Go Back</button>
 
                 </div>
+                <FooterComponent />
             </div>
         )
     }

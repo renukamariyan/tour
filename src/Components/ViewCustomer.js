@@ -1,69 +1,52 @@
-import React, { Component } from 'react'
-import IssueService from '../Service/IssueService'
-import HeaderComponent from './Header'
+import React, { Component } from 'react';
+import CustomerService from '../Service/CustomerService';
 
-class ViewIssueById extends Component {
+class ViewCustomer extends Component {
     constructor(props) {
-        super(props)
-
-        this.state = {
-            issueId: this.props.match.params.issueId,
-            issue: {}
-            
-           
-           
-        }
+        super(props);
+        this.state = { 
+            id: this.props.match.params.custid,
+            customer: {},
+         }
     }
-    
-    componentDidMount(){
-        IssueService.getIssueById(this.props.location.state.issueId).then( res => {
-            console.log(this.state);
-            this.setState({issue: res.data});
-           
+    componentDidMount() {
+        CustomerService.getCustomerById(this.props.location.state.userId).then(res =>{
+            this.setState({customer: res.data});
         })
-       
-        
-    
     }
     
-    cancel(){
-        this.props.history.push('/issues/allissue');
-    }
-
-    render() {
-        if(!this.state.issue.userId){
-            return null
-        }
-        return (
+    render() { 
+        return (  
             <div>
-               <HeaderComponent />
-                <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center"> View Issue Details</h3>
-                   
-                    <div className = "card-body" key = {this.state.issue.issueId}>
-                        <div className = "row">
-                            <label> Issue Id: </label>
-                            <div> { this.state.issue.issueId}</div>
+            <br></br>
+                <div className ="card col-md-6 offset-md-3">
+                    <h3 className="text-center"> Customer Details </h3>
+                    <div className="card-body">
+                        <div className="row">
+                            <label>User Id: </label>
+                            <div>{this.state.customer.id} </div>
                         </div>
-                        <div className = "row">
-                            <label> IssueDescription: </label>
-                            <div> { this.state.issue.issueDescription}</div>
+                        <div className="row">
+                            <label> Name: </label>
+                            <div>{this.state.customer.name} </div>
                         </div>
-                        <div className = "row">
-                            <label> Issue Status: </label>
-                            <div> { this.state.issue.issueStatus}</div>
+                        <div className="row">
+                            <label>EmailId: </label>
+                            <div>{this.state.customer.emailId} </div>
                         </div>
-                        <div className = "row">
-                            <label> Customer Id: </label>
-                          <div>{ this.state.issue.userId.userId}</div>  
-                         </div>
+                        <div className="row">
+                            <label>Age: </label>
+                            <div>{this.state.customer.age} </div>
+                        </div>
+                        <div className="row">
+                            <label>PhoneNo: </label>
+                            <div>{this.state.customer.phoneNo} </div>
+                        </div>
                     </div>
-                    <button className="btn btn-success" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Go Back</button>
-
                 </div>
             </div>
-        )
+        );
     }
 }
-
-export default ViewIssueById
+ 
+export default ViewCustomer;

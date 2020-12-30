@@ -3,6 +3,7 @@ import TourPackageService from '../Service/TourPackageService'
 import {Link} from 'react-router-dom'
 import HeaderComponent from './Header'
 import { Button } from 'react-mdl'
+import FooterComponent from './Footer'
 class DisplayAllTour extends Component {
     constructor(props) {
         super(props)
@@ -106,6 +107,7 @@ class DisplayAllTour extends Component {
                 
                                     
             </div>
+            <FooterComponent />
             </div>
         )
     }

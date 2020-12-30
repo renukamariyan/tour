@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FooterComponent from './Footer';
 import HeaderComponent from './Header';
 
 
@@ -12,6 +13,12 @@ class StaffWelcome extends Component {
      displayTour(){
          this.props.history.push('/tour/all');
      }
+     displayCustomer(){
+        this.props.history.push({
+            pathname:`/listcustomer`,
+            
+        });
+    }
     render() {
         return (
             <div>
@@ -23,7 +30,8 @@ class StaffWelcome extends Component {
             <button className="btn btn-info" onClick={this.display.bind(this)} style={{marginBottom: "10px"}}>View Issues</button>
             <button className="btn btn-info" onClick={this.saveTour.bind(this)} style={{marginLeft: "10px"}}>Add tour</button>
             <button className="btn btn-info" onClick={this.displayTour.bind(this)} style={{marginLeft: "10px"}}>Display tour</button><br/>
-            
+            <button className="btn btn-info" onClick={this.displayCustomer.bind(this)} style={{marginBottom: "10px"}}>View Customer</button>
+            <FooterComponent />
             </div>                      
         
         )

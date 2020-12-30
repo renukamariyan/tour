@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import IssueService from '../Service/IssueService'
+import FooterComponent from './Footer'
 import HeaderComponent from './Header'
 
 
@@ -87,7 +88,7 @@ class AddIssue extends Component {
                         </div>
 
                    </div>
-            </div>
+            <FooterComponent /> </div>
         )
     }
 

@@ -11,8 +11,8 @@ function HeaderComponent() {
             <Navigation style={{backgroundColor:"turquoise"}} >
                 <Link to="/" style={{color: 'black',fontSize:"22px"}}>Home</Link>
                 <Link to="/AboutUs" style={{color: 'black',fontSize:"22px"}}>About us</Link>
-                <a href="/" style={{color: 'black',fontSize:"22px"}}>Blog</a>
-                <a href="/package" style={{color: 'black',fontSize:"22px"}}>Packages</a>
+                <Link to="/blog" style={{color: 'black',fontSize:"22px"}}>Blog</Link>
+                <Link to="/package" style={{color: 'black',fontSize:"22px"}}>Packages</Link>
                 <div style={{position: 'relative'}}>
                 <a id="demo-menu-lower-right" style={{color: 'black',fontSize:"22px"}}>Login</a>
                 <Menu target="demo-menu-lower-right" align="right">

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TourPackageService from '../Service/TourPackageService'
 import HeaderComponent from './Header'
 import './Cust.css';
+import FooterComponent from './Footer';
 
 class CreateTour extends Component {
     constructor(props) {
@@ -113,11 +114,11 @@ class CreateTour extends Component {
                                 </div>
                             </div>
                         </div>
-
+                    
                    </div>
                         
                     
-                    
+                   <FooterComponent />
             </div>
               
         )

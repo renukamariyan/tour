@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TourPackageService from '../Service/TourPackageService'
+import FooterComponent from './Footer'
 import HeaderComponent from './Header'
 class UpdateTourPackage extends Component {
     constructor(props) {
@@ -82,6 +83,7 @@ class UpdateTourPackage extends Component {
                         </div>
 
                    </div>
+                   <FooterComponent />
             </div>
         )
     }

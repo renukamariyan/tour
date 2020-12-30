@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CustomerService from '../Service/CustomerService';
 import ReactPaginate from 'react-paginate' ;
 import HeaderComponent from './Header';
+import FooterComponent from './Footer';
 class ListCustomer  extends Component {
     constructor(props){
         super(props)
@@ -60,9 +61,7 @@ class ListCustomer  extends Component {
             <div>
                 <HeaderComponent />
                 <h2 className="text-center">Customer List</h2>
-                <div className="row">
-                    <button className="btn btn-primary" onClick={this.insertCustomer}>SignUp</button>
-                </div>
+                
                 <div className="container"><ReactPaginate previousLabel={"prev"} nextLabel={"next"} breakLabel={"..."} breakClassName={"break me"}
                 pageCount={this.state.pageCount} marginPagesDisplayed={2} pageRangeDisplayed={10} onPageChange={this.clickPageHandler}
                 containerClassName={"pagination"} subContainerClassName={"pages pagination"} activeClassName={"active"}></ReactPaginate>
@@ -71,12 +70,11 @@ class ListCustomer  extends Component {
                     <table className="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                <th>Customer Id</th>
+                                <th style={{textAlign:"center"}}>Customer Id</th>
                                 <th>Customer Name</th>
                                 <th>Customer EmailId</th>
                                 <th>Customer Age</th>
                                 <th>Customer PhoneNo</th>
-                                <th>Customer Details</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -84,20 +82,18 @@ class ListCustomer  extends Component {
                                 this.state.customer.map(
                                     customer =>
                                     <tr key={customer.id}>
-                                            <td>{customer.userId}</td>
+                                            <td align="center">{customer.userId}</td>
                                             <td>{customer.name} </td>
                                             <td> {customer.emailId} </td>
-                                            <td> {customer.age}</td>
+                                            <td align="center"> {customer.age}</td>
                                             <td> {customer.phoneNo} </td>
-                                            <td>
-                                                <button onClick={ ()=> this.viewCustomer(customer.userId)} className="btn btn-info">View</button>
-                                            </td>
                                     </tr>
                                 )
                             }
                         </tbody>
                     </table>
                 </div>
+                <FooterComponent />
             </div>
 
         )

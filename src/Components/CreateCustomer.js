@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CustomerService from '../Service/CustomerService';
+import FooterComponent from './Footer';
 class CreateCustomerComponent extends Component {
     constructor(props) {
         super(props)
@@ -94,10 +95,11 @@ class CreateCustomerComponent extends Component {
                                  </div>
                         </div>
                     </div>
+                   
                 </div>
             </div>
          ); 
-    } n
+    } 
 }
  
 export default CreateCustomerComponent;

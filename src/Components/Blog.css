@@ -1,0 +1,25 @@
+
+  .card-deck {
+    width: 80%;
+    margin: 60px auto;
+  }
+
+  .card {
+    border:none;
+  }
+
+  body {
+    background-color: darkturquoise;
+  }
+
+  .options {
+    width: 40%;
+    margin: auto;
+  }
+
+  h1 {
+    color:rgb(21, 24, 192);
+    text-align: center;
+    margin-top: 10px;
+  }
+

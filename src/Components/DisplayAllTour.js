@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TourPackageService from '../Service/TourPackageService'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderComponent from './Header';
+import FooterComponent from './Footer';
 class DisplayAllTour extends Component {
     constructor(props) {
         super(props)
@@ -89,7 +90,7 @@ class DisplayAllTour extends Component {
                         </div> 
                        <button  className="btn btn-success"  style={{marginLeft: "500px"}}onClick={this.logout.bind(this)} >Logout</button>
                             
-
+            <FooterComponent />
             </div>
         )
     }
