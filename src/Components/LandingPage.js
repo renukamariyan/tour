@@ -1,40 +1,15 @@
 
-import './App.css';
+import './LandingPage.css';
 import {Layout,Header,Navigation,Content,Menu,MenuItem,Footer,FooterDropDownSection,FooterLinkList,FooterSection} from 'react-mdl';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import About from './Components/AboutUs';
-import Contact from './Components/Blog';
-import'bootstrap/dist/css/bootstrap.css';
-import'bootstrap/dist/css/bootstrap-theme.css';
+import HeaderComponent from './Header';
+
 function App() {
   return (
-    <div><div style={{height: '440px', position: 'relative'}}>
-    <Layout style={{background: 'url(https://www.scholarshipchina.com/upload/News/18/18/b91d94229ead1f1b16cd6a1616a2c4a6.jpg) center / cover'}}>
-        <Header transparent title="TRIPTOK" style={{color: 'black'}}>
-     
-            <Navigation >
-                <Link to="/AboutUs" style={{color: 'black'}}>About us</Link>
-                <a href="/" style={{color: 'black'}}>Blog</a>
-                <a href="/" style={{color: 'black'}}>Packages</a>
-                <div style={{position: 'relative'}}>
-                <a id="demo-menu-lower-right" style={{color: 'black'}}>Login</a>
-                <Menu target="demo-menu-lower-right" align="right">
-                <MenuItem>As Customer</MenuItem>
-                <MenuItem>As Admin</MenuItem>         
-                <MenuItem>As Staff</MenuItem>
-                </Menu>
-                </div>  
-            </Navigation>
-          
-        </Header>
-        
-        <b><h1 align="center"><br/><br />Welcome to TRIPTOK<br/><i> Trip on tip </i></h1></b>
-        <Content />
-
-    </Layout>
-</div>
+    <div>
+      <HeaderComponent/>
 <div style={{height: '200px', position: 'relative',backgroundColor:'mediumturquoise'}}>
   <br /><br />
  <p style={{textAlign:'center',fontSize:'25px'}}>Wanna get away from 9 to 5 regular job.<br/>Take your phone just click and pay for the amazing getaway experience.<br/>Worried about "PLANNING" leave that to us.<br/>It ain't called Trip on tip for no reason </p>
@@ -50,7 +25,7 @@ function App() {
 
 </div>
 <Carousel
-        showArrows={true}
+        showArrows={false}
         infiniteLoop={true}
         showThumbs={false}
         showStatus={false}
@@ -96,10 +71,11 @@ function App() {
       </Carousel>
       <br /><br />
       </div>
-<Footer size="mega">
-  <div>
+      <div>
 
   </div>
+<Footer size="mega">
+  
     <FooterSection type="middle">
     <FooterDropDownSection title="Contact Us">
            <h4>TRIPTOK</h4>

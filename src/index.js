@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Main from './Components/Main';
 import reportWebVitals from './reportWebVitals';
+import 'react-mdl/extra/material.css';
+import 'react-mdl/extra/material.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap-table-next/dist/react-bootstrap-table2.css';
+import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Main />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

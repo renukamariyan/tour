@@ -1,13 +1,10 @@
 
-import './App.css';
+import './LandingPage.css';
 import {Layout,Header,Navigation,Content,Menu,MenuItem,Footer,FooterDropDownSection,FooterLinkList,FooterSection} from 'react-mdl';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import About from './Components/AboutUs';
-import Contact from './Components/Blog';
-import'bootstrap/dist/css/bootstrap.css';
-import'bootstrap/dist/css/bootstrap-theme.css';
+
 function App() {
   return (
     <div><div style={{height: '440px', position: 'relative'}}>
@@ -21,8 +18,8 @@ function App() {
                 <div style={{position: 'relative'}}>
                 <a id="demo-menu-lower-right" style={{color: 'black'}}>Login</a>
                 <Menu target="demo-menu-lower-right" align="right">
-                <MenuItem>As Customer</MenuItem>
-                <MenuItem>As Admin</MenuItem>         
+                <MenuItem> <Link to="/welcomecustomer" >As Customer</Link></MenuItem>
+                <MenuItem><Link to="/StaffWelcome" >As Staff</Link> </MenuItem>         
                 <MenuItem>As Staff</MenuItem>
                 </Menu>
                 </div>  
@@ -50,7 +47,7 @@ function App() {
 
 </div>
 <Carousel
-        showArrows={true}
+        showArrows={false}
         infiniteLoop={true}
         showThumbs={false}
         showStatus={false}
