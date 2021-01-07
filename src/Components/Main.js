@@ -24,9 +24,11 @@ import StaffLogin from './StaffLogin';
 import ListAllTourInfo from './ListAllTourInfo';
 import Package from './Package';
 import Blog from './Blog';
-
+import AddIssuesForm from './AddIssueForm';
+import UpdateTourPackageForm from './UpdateTourPackageForm';
 const Main = () => (
 <Switch>
+{/* <Route exact path="/issueform" component={AddIssuesForm}></Route> */}
 <Route exact path="/blog" component={Blog}></Route>
 <Route exact path="/payment" component={Payment}></Route>
 <Route exact path="/package" component={Package}></Route>
@@ -40,12 +42,12 @@ const Main = () => (
 <Route path = "/welcomestaff" exact component = {StaffWelcome}></Route>
 <Route path = "/welcomecustomer" exact component = {CustomerWelcome}></Route>
 <Route path = "/issues/allissue" exact component = {ListAllIssues}></Route>
-<Route exact path = "/issues/addissue" exact component = {AddIssue}></Route>
+<Route exact path = "/issues/addissue" exact component = {AddIssuesForm}></Route>
 <Route path = "/issues/updateissue/:issueId" exact component = {UpdateIssues}></Route> 
 <Route path = "/issues/:issueId" exact component = {ViewIssueById}></Route>
 <Route path = "/welcomestaff" exact component = {StaffWelcome}></Route>                                                  
 <Route path = "/tour/all" exact component = {DisplayAllTour}></Route>
-<Route path = "/tour/update/:packageId" exact component = {UpdateTourPackage}></Route>
+<Route path = "/tour/update/:packageId" exact component = {UpdateTourPackageForm}></Route>
 <Route path = "/tour/delete/:packageId" exact component = {DeleteTourPackage}></Route>
 <Route path = "/tour/createnewpackage" exact component = {CreateTour}></Route>
 <Route path = "/custinfo/:packageId,packagePrice" exact component = {CustomerWelcome}></Route>

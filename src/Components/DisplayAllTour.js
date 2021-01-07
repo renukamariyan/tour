@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TourPackageService from '../Service/TourPackageService'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import HeaderComponent from './Header';
 import FooterComponent from './Footer';
 class DisplayAllTour extends Component {

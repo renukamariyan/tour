@@ -78,7 +78,7 @@ class DisplayAllTour extends Component {
                                             <div className="card-body text-center">
                                                 <h4 class="card-title">{tour.packageName}</h4>
                                                 <img className="card-img-top" src={tour.tourImage} alt="Card image"></img>
-                                                <div class="card-body"><p className="card-text">{tour.description}</p>
+                                                <div class="card-body"><b><p className="card-text">{tour.description}</p></b>
                                                 <p className="card-text">DaysCount : {tour.daysCount}</p>
                                                 <p className="card-text">NightCount : {tour.nightsCount}</p>
                                                 <p className="card-text">PackageType : {tour.packageType}</p>

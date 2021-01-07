@@ -48,7 +48,7 @@ class CreateTourInfo extends React.Component{
 
     
     cancel(){
-        this.props.history.push('/welcomestaff');
+        this.props.history.push('/tour/all/cust');
     }
     render(){
         return(
